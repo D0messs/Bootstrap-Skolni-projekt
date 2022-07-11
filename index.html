@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dominik Pavlica - Bootstrap</title>
+<link rel="stylesheet" href="CSS/styles.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container mt-2">
+    <ul class="nav border bg-light rounded-3">
+      <li class="nav-item">
+        <a class="nav-link text-secondary active" href="#">ADMIN IS</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown">Obchod</a>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Obchod 1</a>
+            <a href="#" class="dropdown-item">Obchod 2</a>
+            <a href="#" class="dropdown-item">Obchod 3</a>
+        </div>
+    </li>
+      <li class="nav-item">
+        <a class="nav-link text-secondary" href="#">Zakázky</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-secondary" href="#">Plán výroby</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown">Nastavení</a>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Nastavení 1</a>
+            <a href="#" class="dropdown-item">Nastavení 2</a>
+            <a href="#" class="dropdown-item">Nastavení 3</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown ms-auto">
+      <a href="#" class="nav-link dropdown-toggle text-secondary bi bi-person-fill" data-bs-toggle="dropdown"> Petr Novák</a>
+      <div class="dropdown-menu">
+          <a href="#" class="dropdown-item">Mé platby</a>
+          <a href="#" class="dropdown-item">Osobní údaje</a>
+          <a href="#" class="dropdown-item">Support</a>
+          <a href="#" class="dropdown-item">Odlásit se</a>
+      </div>
+  </li>
+    </ul>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col bigger-col">
+        <a class="very-small-text dark-blue fw-bold" href="">ADMIN IS</a>
+        <span class="very-small-text">></span>
+        <a class="very-small-text dark-blue fw-bold" href="">Nabídky</a>
+        <span class="very-small-text">></span>
+        <span class="very-small-text fw-bold">Nová nabídka</span>
+      </div>
+      <div class="col bigger-col border bg-light-green rounded-3 me-2">
+        <span class="align-middle text-center h6 text-success">Nabídka byla uložena</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col bigger-col border bg-light rounded-3 me-2 box-of-buttons">
+        <button type="button" class="btn btn-primary mt-3">Uložit</button>
+        <button type="button" class="btn btn-warning float-end mt-3">Zpět do nabídky</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col me-5 ps-0">
+        <label for="nabidka-k-poptavce" class="form-label h5" style="font-weight: normal">Nabídka k poptávce</label>
+        <select class="form-select mt-2 mb-2 border-3 border-secondary" id="nabidka-k-poptavce">
+          <option>Automatická svářečka pytlů (ID:1)</option>
+          <option>Automatická svářečka pytlů (ID:2)</option>
+          <option>Automatická svářečka pytlů (ID:3)</option>
+          <option>Automatická svářečka pytlů (ID:4)</option>
+        </select>
+
+        <label for="nazev" class="form-label h5" style="font-weight: normal">Název</label>
+        <input type="text" class="form-control mt-2 mb-2 border-3 border-secondary" id="nazev">
+      </div>
+
+      <div class="col ms-5">
+        <label for="datum-vytvoreni" class="form-label h5" style="font-weight: normal">Datum vytvoření</label>
+        <select class="form-select mt-2 mb-2 border-3 border-secondary" id="datum-vytvoreni">
+          <option>25.5.2018</option>
+          <option>24.5.2018</option>
+          <option>23.5.2018</option>
+          <option>22.5.2018</option>
+          <option>21.5.2018</option>
+        </select>
+
+        <label for="datum-akceptace" class="form-label h5" style="font-weight: normal">Datum akceptace</label>
+        <select class="form-select mt-2 mb-2 border-3 border-secondary" id="datum-akceptace">
+          <option>26.5.2018</option>
+          <option>27.5.2018</option>
+          <option>28.5.2018</option>
+          <option>29.5.2018</option>
+          <option>30.5.2018</option>
+        </select>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col ps-0">
+        <label for="popis" class="form-label h5" style="font-weight: normal">Popis</label>
+        <textarea class="form-control remove-resize-button popis-area-height border-3 border-secondary" aria-label="With textarea" id="popis"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4 ps-0">
+  <table class="table border border-2 " style="border-color: rgba(137,178,212,222) !important">
+    <thead>
+      <tr>
+        <th colspan="2" class="text-white align-middle" style="background-color: rgba(51,122,183,255)">Dokumenty</th>
+        <th colspan="3" class="text-white" style="background-color: rgba(51,122,183,255)">
+          <input type="file" id="upload" style="background-color: rgba(51,122,183,255)" hidden/>
+          <label class="btn fw-bold bi bi-plus-circle float-end" for="upload" style="background-color: rgba(51,122,183,255)"> Připojit soubor</label>
+        </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="fw-bold">
+          <td class="ps-4">Název</td>
+          <td>Název souboru</td>
+          <td>Datum nahrání</td>
+         </tr>
+          <tr>
+              <td class="ps-4">Cenová nabídka</td>
+              <td>specifikace.pdf</td>
+              <td>25.5.2018</td>
+          </tr>
+          <tr >
+              <td class="ps-4">Návrh smlouvy</td>
+              <td>smlouva_navrh.pdf</td>
+              <td>25.5.2018</td>
+          </tr>
+          <tr>
+              <td class="ps-4">Čestné prohlášení</td>
+              <td>cestne_prohlaseni.doc</td>
+              <td>25.5.2018</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+  
+<div class="container mt-4 ps-0">
+  <table class="table border border-2 " style="border-color: rgba(217,237,247,255) !important">
+    <thead>
+      <tr>
+        <th colspan="2" class="text-white align-middle border" style="border-color: rgba(217,237,247,255) !important; background-color: rgba(217,237,247,255); color: rgba(47,120,156,255) !important">Poznámky</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="remove-cell-border">
+          <td class="ps-4 ">
+            <table class="table">
+              <thead>>
+                <tr>
+                  <th colspan="3" class="text-white align-middle" style="width: 85%">
+                    <textarea class="form-control remove-resize-button popis-area-height border-2 border-secondary" aria-label="With textarea" id="poznamka">Nová poznámka</textarea>
+                  </th>
+                  <th colspan="3" class="text-white">
+                    <button type="button" class="btn btn-warning float-end mt-0 border text-white fw-bold" style="height: 125px; width: 85%; background-color: rgba(91,192,222,255); border-color: rgba(91,192,222,255);">Vložit <br>poznámku</button>
+                  </th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+          </td>
+
+      </tr>
+
+          <tr class="remove-cell-border">
+              <td class="ps-4 ">
+                <table class="table border border-2 " style="border-color: rgba(217,237,247,255) !important">
+                  <thead>
+                    <tr>
+                      <th colspan="2" class="text-white align-middle small h6" style="background-color: rgba(217,237,247,255); color: rgba(150,191,211,255) !important; border-color: rgba(217,237,247,255) !important">Petr Novák - 27.5.2018</th>
+                      <th colspan="3" class="text-white" style="background-color: rgba(217,237,247,255)">
+                        <label class="form-check-label float-end ps-2 text-secondary h6" for="soukromeCheckDefault">
+                          soukromé
+                        </label>
+                        <input class="form-check-input float-end" type="checkbox" value="" id="soukromeCheckDefault">
+                        <i class="bi bi-pencil-fill float-end text-dark pe-4"></i>
+                        <i class="bi bi-trash-fill float-end text-dark pe-4"></i>
+                      </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ps-4 small">Nabídku jsem odeslal 26.5.2018 přímo generálnímu řediteli.</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </td>
+
+          </tr>
+
+          <tr>
+            <td class="ps-4">
+              <table class="table border border-2 " style="border-color: rgba(242,222,222,255) !important">
+                <thead>
+                  <tr>
+                    <th colspan="2" class="text-white align-middle small h6" style="background-color: rgba(242,222,222,255); color: rgba(174,119,119,255) !important; border-color: rgba(242,222,222,255) !important;">Petr Novák - 26.5.2018</th>
+                    <th colspan="3" class="text-white checkbox" style="background-color: rgba(242,222,222,255)">
+                      <label class="form-check-label float-end ps-2 text-secondary h6" for="soukromeCheckDefault">
+                        soukromé
+                      </label>
+                      <input class="form-check-input float-end" type="checkbox" value="" id="soukromeCheckDefault" checked>
+                      <i class="bi bi-pencil-fill float-end text-dark pe-4"></i>
+                      <i class="bi bi-trash-fill float-end text-dark pe-4"></i>
+                    </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td class="ps-4 small">Na nabídku jsme dali slevu 15% oproti normálu.</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </td>
+
+        </tr>
+
+      </tbody>
+  </table>
+</div>
+
+</body>
+</html>
